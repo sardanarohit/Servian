@@ -37,21 +37,21 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 
 I am taking the approach for building and deploying the code on linux VM using the custom extension script - 'install.sh' which is used for post deployment of resources.
 
-a. First thing  I have created a script - 'env.sh' which will create base resources as follows 
+1. First thing  I have created a script - 'env.sh' which will create base resources as follows 
     1. Service Principal - for integrating Azure DevOps and Azure resources
     2. Base Resource Group - For Creating base resources
     3. Storage Account - for storing the state file
     4. KeyVault - to store the secret of the VM
-b. Setting up of Azure Devops
+2. Setting up of Azure Devops
     1. Create a Service connections
     2. Setup agent pool to run your release jobs
     3. Create Release pipeline with four tasks
-         Terraform init
-         Terraform validate
-         Terraform plan
-         Terraform apply
-    4. From the artifacts section in the release, create a service connection with the GitHub Account and integrate the source repo
-    5. In the Pre-deployment conditions set it to manual trigger and add the approvals (optional in this case)   
+       1. Terraform init
+       2. Terraform validate
+       3. Terraform plan
+       4. Terraform apply
+3. From the artifacts section in the release, create a service connection with the GitHub Account and integrate the source repo
+4. In the Pre-deployment conditions set it to manual trigger and add the approvals (optional in this case)   
 ![](https://github.com/sardanarohit/Servian/blob/read/images/release.png)
 
 ## Scripts Walkthrough
