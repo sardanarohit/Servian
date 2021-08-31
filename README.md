@@ -50,7 +50,7 @@ b. Setting up of Azure Devops
         * Terraform validate
         * Terraform plan
         * Terraform apply
-        ! [release] (https://github.com/sardanarohit/Servian/blob/read/images/release.png)
+        ! [release] (https://raw.githubusercontent.com/sardanarohit/Servian/read/images/release.png)
     4. From the artifacts section in the release, create a service connection with the GitHub Account and integrate the source repo
     5. In the Pre-deployment conditions set it to manual trigger and add the approvals (optional in this case)   
 
@@ -117,7 +117,7 @@ Verify the provisioing of all the resources
 Navigate to the VM and copy the public IP
 
 Open the web browser to launch the application and paste <public ip>:3000
-! [app] (https://github.com/sardanarohit/Servian/blob/read/images/app.png)
+! [app] (https://raw.githubusercontent.com/sardanarohit/Servian/read/images/app.png)
 
 ### Logs and directory structure
 
@@ -130,4 +130,4 @@ Some of the useful paths
 3. Application Path --->    ``/var/lib/waagent/custom-script/download/0/TechChallengeApp``
 4. Deployment logs  --->    ``/var/lib/waagent/custom-script/download/0/stdout``
 
-! [logs] (https://github.com/sardanarohit/Servian/blob/read/images/logs.png)
+! [logs] (https://raw.githubusercontent.com/sardanarohit/Servian/read/images/logs.png)
