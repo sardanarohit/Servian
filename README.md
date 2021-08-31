@@ -98,14 +98,14 @@ It consist of four terraform scripts
 1.  dataresources.tf - Data resources script which we created using base script
 2.  main.tf - main script for initializing the provider                     
 3.  variables.tf - scripts for all the variables used in the main module
-    a. used one prefix variable as suffix for all the resources
-    b. used list(object) variable for NSG rules
-    c. used map variable in case of tags
+    1. used one prefix variable as suffix for all the resources
+    2. used list(object) variable for NSG rules
+    3 used map variable in case of tags
 4.  vm.tf - Please see below the key poinnts 
-    a. Created all the resources in this script
-    b. All the values are stored in variable.tf
-    c. Used Dynamic blocks to avoid repetetion while creating NSG rules
-    d. used custom script as extension to manage post deployment
+    1. Created all the resources in this script
+    2. All the values are stored in variable.tf
+    3. Used Dynamic blocks to avoid repetetion while creating NSG rules
+    4. used custom script as extension to manage post deployment
 
 
 ## Post Deployment
