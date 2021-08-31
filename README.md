@@ -114,9 +114,9 @@ Navifate to the azure portal and to the new resource group which has been create
 
 Verify the provisioing of all the resources
 
-Navigate to the VM and copy the public IP
+Navigate to the VM and copy the Public IP
 
-Open the web browser to launch the application and paste public ip:3000
+Open the web browser to launch the application and paste "Public IP:3000"
 
 ![](https://github.com/sardanarohit/Servian/blob/read/images/app.png)
 
