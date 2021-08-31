@@ -25,7 +25,7 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 │       ├── main.tf                       # main script 
 │       ├── variables.tf                  # scripts for all the variables
 │       ├── vm.tf                         # main module script to create the VM
-│───── scripts                            # Images directoryn for readme
+│───── images                            # Images directoryn for readme
 ````
 
 ## The Solution Consist of three parts
@@ -50,7 +50,7 @@ b. Setting up of Azure Devops
         * Terraform validate
         * Terraform plan
         * Terraform apply
-        ! [release] ()
+        ! [release] (https://github.com/sardanarohit/Servian/blob/read/images/release.png)
     4. From the artifacts section in the release, create a service connection with the GitHub Account and integrate the source repo
     5. In the Pre-deployment conditions set it to manual trigger and add the approvals (optional in this case)   
 
@@ -117,7 +117,7 @@ Verify the provisioing of all the resources
 Navigate to the VM and copy the public IP
 
 Open the web browser to launch the application and paste <public ip>:3000
-! [app] ()
+! [app] (https://github.com/sardanarohit/Servian/blob/read/images/app.png)
 
 ### Logs and directory structure
 
@@ -130,4 +130,4 @@ Some of the useful paths
 3. Application Path --->    ``/var/lib/waagent/custom-script/download/0/TechChallengeApp``
 4. Deployment logs  --->    ``/var/lib/waagent/custom-script/download/0/stdout``
 
-! [logs] ()
+! [logs] (https://github.com/sardanarohit/Servian/blob/read/images/logs.png)
