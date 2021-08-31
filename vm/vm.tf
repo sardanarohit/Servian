@@ -96,7 +96,7 @@ resource "azurerm_virtual_machine" "vm" {
   }
   os_profile {
     computer_name  = "${var.prefix}vm"
-    admin_username = "local"
+    admin_username = var.username
     admin_password = data.azurerm_key_vault_secret.secret.value
   }
   os_profile_linux_config {
@@ -114,7 +114,7 @@ resource "azurerm_virtual_machine_extension" "extension" {
 
   protected_settings = <<PROTECTED_SETTINGS
     {
-      "fileUris": ["https://raw.githubusercontent.com/sardanarohit/Servian_challange/feature/scripts/install.sh"],
+      "fileUris": ["https://raw.githubusercontent.com/sardanarohit/Servian/feature/scripts/install.sh"],
       "commandToExecute" : ". ./install.sh"      
     }
   PROTECTED_SETTINGS

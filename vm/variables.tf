@@ -8,6 +8,12 @@ variable "location" {
   default     = "australiaeast"
 }
 
+variable "username" {
+  description = "username of the vm"
+  default     = "localadmin"
+}
+
+
 variable "vnet_interface" {
   description = "CIDR range of the VNET"
   default     = ["10.0.0.0/24"]
