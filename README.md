@@ -15,6 +15,7 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 3. GitHub Account
 
 ## Repository structure
+````
 
 │────── scripts                           # Scripts directory 
 │       ├── env.sh                        # Script to provision Base Resources used in solution
@@ -25,6 +26,7 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 │       ├── variables.tf                  # scripts for all the variables
 │       ├── vm.tf                         # main module script to create the VM
 
+````
 
 ## The Solution Consist of three parts
 1. Creating the base resources - implemented via running one script - 'env.sh'
