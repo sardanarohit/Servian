@@ -25,7 +25,7 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 │       ├── main.tf                       # main script 
 │       ├── variables.tf                  # scripts for all the variables
 │       ├── vm.tf                         # main module script to create the VM
-│───── images                            # Images directoryn for readme
+│───── images                             # Images directoryn for readme
 ````
 
 ## The solution consists of three parts:
