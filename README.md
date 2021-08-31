@@ -14,7 +14,7 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 2. Azure DevOps account (No)
 3. GitHub Account (No)
 
-## Repository structure
+## Repository Structure
 ````
 
 │────── scripts                           # Scripts directory 
@@ -116,7 +116,7 @@ Verify the provisioing of all the resources
 
 Navigate to the VM and copy the public IP
 
-Open the web browser to launch the application and paste <public ip>:3000
+Open the web browser to launch the application and paste public ip:3000
 
 ![](https://github.com/sardanarohit/Servian/blob/read/images/app.png)
 
