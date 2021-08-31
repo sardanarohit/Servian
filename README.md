@@ -4,15 +4,15 @@
 ***
 ## Overview
 
-The Solution consist of creating the base resources via Azure CLI commands through a script and using the Terraform for building the infrastructure with custom extension, which manages a Virtual Machine to provide post deployment configuration and run automated tasks.
+The solution consists of base resources via Azure CLI commands through a script and using the Terraform for building the infrastructure with custom extension, which manages a Virtual Machine - to provide post deployment configuration and run automated tasks.
 
 I have used Azure DevOps Releases to deploy the Terraform script on the Azure portal.
  
-## Prerequisites
+## Prerequisites (cost involved)
 
-1. Azure Subscription
-2. Azure DevOps account
-3. GitHub Account
+1. Azure Subscription (Yes)
+2. Azure DevOps account (No)
+3. GitHub Account (No)
 
 ## Repository structure
 ````
@@ -28,10 +28,10 @@ I have used Azure DevOps Releases to deploy the Terraform script on the Azure po
 │───── images                            # Images directoryn for readme
 ````
 
-## The Solution Consist of three parts
-1. Creating the base resources - implemented via running one script - 'env.sh'
-2. Creating all the Azure Resources - used Terraform as IAAC
-3. Deploying the resources on the Azure Cloud by Azure DevOps 
+## The solution consists of three parts:
+1. For creating the base resources - implemented via running one script - 'env.sh'
+2. For creating all the Azure Resources - used Terraform as IAAC
+3. For deploying the resources on the Azure Cloud by Azure DevOps 
 
 ## Architecture  
 
