@@ -124,7 +124,7 @@ Login via putty - you can get the credentials and log in details from the variab
 
 Some of the useful paths
 
-Go path - ``/usr/local/go/bin``
-Postgress Path ``/var/lib/postgresql/``
-Application Path ``/var/lib/waagent/custom-script/download/0/TechChallengeApp``
-Deployment logs ``/var/lib/waagent/custom-script/download/0/stdout``
+1. Go path --->             ``/usr/local/go/bin``
+2. Postgress Path --->      ``/var/lib/postgresql/``
+3. Application Path --->    ``/var/lib/waagent/custom-script/download/0/TechChallengeApp``
+4. Deployment logs  --->    ``/var/lib/waagent/custom-script/download/0/stdout``
