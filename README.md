@@ -46,13 +46,13 @@ b. Setting up of Azure Devops
     1. Create a Service connections
     2. Setup agent pool to run your release jobs
     3. Create Release pipeline with four tasks
-        * Terraform init
-        * Terraform validate
-        * Terraform plan
-        * Terraform apply
-        ![release] (./blob/read/images/release.png?raw=true)
+         Terraform init
+         Terraform validate
+         Terraform plan
+         Terraform apply
     4. From the artifacts section in the release, create a service connection with the GitHub Account and integrate the source repo
     5. In the Pre-deployment conditions set it to manual trigger and add the approvals (optional in this case)   
+![](https://github.com/sardanarohit/Servian/blob/read/images/release.png)
 
 ## Scripts Walkthrough
 
@@ -117,7 +117,8 @@ Verify the provisioing of all the resources
 Navigate to the VM and copy the public IP
 
 Open the web browser to launch the application and paste <public ip>:3000
-![app] (./blob/read/images/app.png?raw=true)
+
+![](https://github.com/sardanarohit/Servian/blob/read/images/app.png)
 
 ### Logs and directory structure
 
@@ -130,4 +131,4 @@ Some of the useful paths
 3. Application Path --->    ``/var/lib/waagent/custom-script/download/0/TechChallengeApp``
 4. Deployment logs  --->    ``/var/lib/waagent/custom-script/download/0/stdout``
 
-![logs] (./blob/read/images/logs.png?raw=true)
+![](https://github.com/sardanarohit/Servian/blob/read/images/logs.png)
