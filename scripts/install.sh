@@ -52,11 +52,11 @@ proj_base=/app/installedApps
 
 mkdir -p "$proj_base" && cd $_
 
-git clone https://github.com/servian/TechChallengeApp.git "$proj_base"
+git clone https://github.com/servian/TechChallengeApp.git
 
 echo "cloning the repo at $PWD"
 
-cd "$proj_base"/TechChallengeApp
+cd ./TechChallengeApp
 
 #calling builld.sh to build the applicaation
 echo user is $USER
@@ -87,7 +87,7 @@ else
         exit 1
 fi
 
-cd "$proj_base"/TechChallengeApp/dist
+cd ./dist
 
 #changing the password for db configuration in conf.toml
 
@@ -104,12 +104,10 @@ std_logs=/var/lib/waagent/custom-script/download/0/
 
 status_code="$(curl --write-out %{http_code} --silent --output /dev/null http://servianvm:3000/healthcheck/)"
 
-ln -s "$std_logs" "$proj_base"/logs
-
 echo "$status_code"
 
 if [ "$status_code" -eq 200 ] ; then
         echo "server started successfully. check the service at 3000 "
 else
-  echo "something is not right, please check the "$proj_base"/logs directory "
+  echo "something is not right, please check the "$std_logs" directory "
 fi
