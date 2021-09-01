@@ -1,7 +1,5 @@
 #!/bin/bash -x
 
-echo "first time path is $PATH"
-
 #installing PostgreSQL
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 sudo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -103,6 +101,7 @@ sed -i 's/"ListenHost" = "localhost"/"ListenHost" = "servianvm"/g' conf.toml
 nohup ./TechChallengeApp serve &
 
 std_logs=/var/lib/waagent/custom-script/download/0/
+
 status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://servianvm:3000/healthcheck/)
 
 if [[ "$status_code" -eq 200 ]] ; then
@@ -110,4 +109,3 @@ if [[ "$status_code" -eq 200 ]] ; then
 else
   echo "something is not right, please check the $std_logs directory "
 fi
-
