@@ -50,10 +50,14 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$GOCACHE:$XDG_CACHE_HOME
 echo "check go version"
 go version
 
-#clone Servian Application repo
+proj_base=/app/installedApps
+
+mkdir -p "$proj_base" && cd $_
+
 git clone https://github.com/servian/TechChallengeApp.git
 
 echo "cloning the repo at $PWD"
+
 cd ./TechChallengeApp
 
 #calling builld.sh to build the applicaation
@@ -98,4 +102,12 @@ sed -i 's/"ListenHost" = "localhost"/"ListenHost" = "servianvm"/g' conf.toml
 # starting the application
 nohup ./TechChallengeApp serve &
 
-echo "server started successfully. check the service at 3000 "
+std_logs=/var/lib/waagent/custom-script/download/0/
+status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://servianvm:3000/healthcheck/)
+
+if [[ "$status_code" -eq 200 ]] ; then
+        echo "server started successfully. check the service at 3000 "
+else
+  echo "something is not right, please check the $std_logs directory "
+fi
+
