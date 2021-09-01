@@ -96,12 +96,12 @@ sed -i 's/"ListenHost" = "localhost"/"ListenHost" = "servianvm"/g' conf.toml
 # starting the application
 nohup ./TechChallengeApp serve &
 
-proj_base=/app/installedApps
+proj_base=/proj/servian
 std_logs=/var/lib/waagent/custom-script/download/0/
 
-sudo ln -s "std_logs" "proj_base"/logs
+sudo mkdir -p "$proj_base"
 
-sudo mkdir -p "$proj_base" && chmod 777 
+sudo ln -s "$std_logs" "$proj_base"/app
 
 status_code="$(curl --write-out %{http_code} --silent --output /dev/null http://servianvm:3000/healthcheck/)"
 
@@ -110,5 +110,5 @@ echo "$status_code"
 if [ "$status_code" -eq 200 ] ; then
         echo "server started successfully. check the service at 3000 "
 else
-  echo "something is not right, please check the "$std_logs" directory "
+  echo "something is not right, please check the "$proj_base"/app directory "
 fi
