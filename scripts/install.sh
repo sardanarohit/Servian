@@ -48,10 +48,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$GOCACHE:$XDG_CACHE_HOME
 echo "check go version"
 go version
 
-proj_base=/app/installedApps
-
-mkdir -p "$proj_base" && cd $_
-
 git clone https://github.com/servian/TechChallengeApp.git
 
 echo "cloning the repo at $PWD"
@@ -100,7 +96,12 @@ sed -i 's/"ListenHost" = "localhost"/"ListenHost" = "servianvm"/g' conf.toml
 # starting the application
 nohup ./TechChallengeApp serve &
 
+proj_base=/app/installedApps
 std_logs=/var/lib/waagent/custom-script/download/0/
+
+sudo ln -s "std_logs" "proj_base"/logs
+
+sudo mkdir -p "$proj_base" && chmod 777 
 
 status_code="$(curl --write-out %{http_code} --silent --output /dev/null http://servianvm:3000/healthcheck/)"
 
