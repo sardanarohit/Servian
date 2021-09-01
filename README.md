@@ -110,6 +110,10 @@ It consist of four terraform scripts
 
 ## Post Deployment
 
+Implemented the health check status check. Checking the status code of /healthcheck/ at the end
+
+![](https://github.com/sardanarohit/Servian/blob/read/images/status.png)
+
 Navifate to the azure portal and to the new resource group which has been created by the terraform script.
 
 Verify the provisioing of all the resources
@@ -128,7 +132,7 @@ Some of the useful paths
 
 1. Go path --->             ``/usr/local/go/bin``
 2. Postgress Path --->      ``/var/lib/postgresql/``
-3. Application Path --->    ``/var/lib/waagent/custom-script/download/0/TechChallengeApp``
-4. Deployment logs  --->    ``/var/lib/waagent/custom-script/download/0/stdout``
+3. Application Path --->    ``/proj/servian/app/TechChallengeApp``
+4. Deployment logs  --->    ``/proj/servian/app/stdout``
 
-![](https://github.com/sardanarohit/Servian/blob/read/images/logs.png)
+![](https://github.com/sardanarohit/Servian/blob/read/images/log_path.png)
