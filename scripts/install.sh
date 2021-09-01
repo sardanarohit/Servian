@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 #installing PostgreSQL
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -107,5 +107,5 @@ status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://s
 if [[ "$status_code" -eq 200 ]] ; then
         echo "server started successfully. check the service at 3000 "
 else
-  echo "something is not right, please check the $std_logs directory "
+  echo "something is not right, please check the "$std_logs" directory "
 fi
