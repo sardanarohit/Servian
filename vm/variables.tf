@@ -10,7 +10,7 @@ variable "location" {
 
 variable "username" {
   description = "username of the vm"
-  default     = "localadmin"
+  default     = "local"
 }
 
 
