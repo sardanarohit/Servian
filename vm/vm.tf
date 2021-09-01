@@ -114,7 +114,7 @@ resource "azurerm_virtual_machine_extension" "extension" {
 
   protected_settings = <<PROTECTED_SETTINGS
     {
-      "fileUris": ["https://raw.githubusercontent.com/sardanarohit/Servian/feature/scripts/install.sh"],
+      "fileUris": ["https://raw.githubusercontent.com/sardanarohit/Servian/master/scripts/install.sh"],
       "commandToExecute" : ". ./install.sh"      
     }
   PROTECTED_SETTINGS
